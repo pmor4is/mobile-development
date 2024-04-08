@@ -13,20 +13,20 @@ export default function App() {
 
   const [name, setName] = useState("")
   const [isEnable, setisEnable] = useState("")
-  const toggleSwitch = () => setIsEnabled(previousState =>
-    !previousState);
+  // const toggleSwitch = () => setIsEnabled(previousState =>
+  //   !previousState);
 
   return (
-    <View>
+    <SafeAreaView>
       <ScrollView>
         <Switch
           trackColor={{ false: '#767577', true: '#81b0ff' }}
           thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
           ios_backgroundColor="#3e3e3e"
-          onValueChange={toggleSwitch}
+          onValueChange={(value) => setisEnable(value)}
           value={isEnabled}
         />
-        
+
         <Text>App</Text>
         <Button
           title="clique"
@@ -45,6 +45,6 @@ export default function App() {
           onChangeText={(text) => setName(text)}
         />
       </ScrollView>
-    </View>
+    </SafeAreaView>
   )
 }
