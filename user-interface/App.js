@@ -1,4 +1,4 @@
-import { SafeAreaView, Text, Button, ToastAndroid, ScrollView, Switch } from 'react-native'
+import { SafeAreaView, Text, Button, ToastAndroid, ScrollView, Switch, Image, TextInput } from 'react-native'
 import React, { useState } from 'react'
 
 function message() {
@@ -21,10 +21,10 @@ export default function App() {
       <ScrollView>
         <Switch
           trackColor={{ false: '#767577', true: '#81b0ff' }}
-          thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
+          // thumbColor={isEnabled ? '#f5dd4b' : '#f4f3f4'}
           ios_backgroundColor="#3e3e3e"
-          onValueChange={(value) => setisEnable(value)}
-          value={isEnabled}
+          // onValueChange={(value) => setisEnable(value)}
+          // value={isEnabled}
         />
 
         <Text>App</Text>
